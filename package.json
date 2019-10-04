@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Event-Booking/EventHome_api/issues"
   },
-  "homepage": "https://github.com/Event-Booking/EventHome_api#readme"
+  "homepage": "https://github.com/Event-Booking/EventHome_api#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0"
+  }
 }
