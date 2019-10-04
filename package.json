@@ -1,0 +1,19 @@
+{
+  "name": "eventhome_api",
+  "version": "1.0.0",
+  "description": "The API for our entire application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Event-Booking/EventHome_api.git"
+  },
+  "author": "eventish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Event-Booking/EventHome_api/issues"
+  },
+  "homepage": "https://github.com/Event-Booking/EventHome_api#readme"
+}
