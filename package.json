@@ -1,10 +1,14 @@
 {
   "name": "eventhome_api",
   "version": "1.0.0",
-  "description": "The API for our entire application",
-  "main": "index.js",
+  "description": "This is the api backend for enventhome application",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +20,30 @@
     "url": "https://github.com/Event-Booking/EventHome_api/issues"
   },
   "homepage": "https://github.com/Event-Booking/EventHome_api#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.8",
+    "nodemon": "^1.19.3",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
   "dependencies": {
-    "dotenv": "^8.1.0"
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
