@@ -47,6 +47,7 @@
     "pretty-quick": "^1.11.1"
   },
   "dependencies": {
+    "consola": "^2.10.1",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
